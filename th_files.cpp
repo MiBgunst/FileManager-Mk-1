@@ -107,13 +107,13 @@ void th_files<F>::remove(string key) {
 	  count_files--;
 	  break;
 	}else
-	  //throw runtime_error("remove: key not found in array");
-    cout<<"La llave no fue encontrada en  la taba"<<endl;
-	  tmp = nxt;
+	  
+    	cout<<"La llave no fue encontrada en  la taba"<<endl;
+	tmp = nxt;
       }
     }
   }else
-    //throw runtime_error("remove: key not found in array");
+    
     cout<<"La llave no fue encontrada en  la taba"<<endl;
 }
 
