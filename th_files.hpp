@@ -62,6 +62,9 @@ public:
   // // print no. of elems in each bucket to a file filename
   // void distribution ( const string & filename ) ;
   void display() const;
+  
+  // abre el archivo  que requiere el usuario
+  void open_file(string key);
 
 };
 
