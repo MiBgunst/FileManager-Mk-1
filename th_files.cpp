@@ -117,6 +117,18 @@ void th_files<F>::remove(string key) {
     cout<<"La llave no fue encontrada en  la taba"<<endl;
 }
 
+//open file
+void th_file<F>::open_file(string key){
+  bool aux = search(key);
+  LPCTSTR aux2 = key.c_str();
+  if(aux == true){
+      ShellExecute(NULL, ("open"), (aux2), NULL, NULL, SW_NORMAL); // ruta (unica en mi caso) para ejecutar el .bat
+  }else{
+    cout<<"el archivo "<<key<<"no existe en su usuario"<<endl;
+  }
+
+
+
 
 
 #endif /* th_files_hpp */
