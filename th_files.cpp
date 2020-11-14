@@ -118,7 +118,8 @@ void th_files<F>::remove(string key) {
 }
 
 //open file
-void th_file<F>::open_file(string key){
+template <typename F>
+void th_files <F>::open_file(string key){
   bool aux = search(key);
   LPCTSTR aux2 = key.c_str();
   if(aux == true){
@@ -126,6 +127,7 @@ void th_file<F>::open_file(string key){
   }else{
     cout<<"el archivo "<<key<<"no existe en su usuario"<<endl;
   }
+}
 
 
 
