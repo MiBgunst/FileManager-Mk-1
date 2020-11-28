@@ -14,7 +14,7 @@ Por ejemplo, si en las líneas indicadas tiene C:/Users/Ángel/Desktop/final/Car
 -> g++ -std=gnu++0x -Wall -Wextra -Werror -c main.cpp
 -> g++ -std=gnu++0x -Wall -Wextra -Werror -c t_hash.cpp
 -> g++ -std=gnu++0x -Wall -Wextra -Werror main.o t_hash.o
--> ./a.exe
+-> a
 
 Si sigue estas instrucciones al pie de la letra, podrá utilizar el programa. Esperamos que lo disfrute.
 
