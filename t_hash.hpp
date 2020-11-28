@@ -28,7 +28,7 @@ class th_files{
   KeyValueFiles<F>* search_bucket (int index , string key ); //ya definido en el cpp
 
 
- hash function
+ //hash function
  unsigned int hash_files(string key){
   unsigned int hashval = 0;
   for (char ch : key) hashval += ch;
