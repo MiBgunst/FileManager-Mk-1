@@ -5,7 +5,7 @@ A continuación, las instrucciones que le permitirán poder ejecutar este códig
 
 2. Guarde todos los archivos en una carpeta nueva o vacía y adicionalmente, tenga presente el path(dirección) de dónde se encuentre la carpeta
 
-3. Abra los archivos main.cpp y t_hash.cpp. Luego, en las líneas 158,212,222,223,231,232 y 235 del archivo main.cpp y también en las líneas 67, 150, y 182 del archivo t_hash.cpp cambie el path(dirección) hasta la carpeta en la que guardó originalmente los archivos.
+3. Abra los archivos main.cpp y t_hash.cpp. Luego, en las líneas 30,84,94,95,103,104 y 107 del archivo main.cpp y también en las líneas 90, 146, y 178 del archivo t_hash.cpp cambie el path(dirección) hasta la carpeta en la que guardó originalmente los archivos.
 Por ejemplo, si en las líneas indicadas tiene C:/Users/Ángel/Desktop/final/CarpetaProtegida/Passwords.txt, lo que usted tiene que cambiar "C:/Users/Ángel/Desktop/final" y de resto, dejarlo igual.
 
 4. Ya en la terminal, el programa tiene que ser ejecutado desde la terminal de windows ya que hay librerías incluidas exclusivas de este sistema operativo.
