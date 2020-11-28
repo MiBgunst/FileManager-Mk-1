@@ -1,0 +1,25 @@
+Gracias por utilizar este programa.
+A continuación, las instrucciones que le permitirán poder ejecutar este código sin ningún problema.
+
+1. Descargue los archivos main.cpp, t_hash.cpp, t_hash.hpp, termcolor.hpp y no_abrir.txt
+
+2. Guarde todos los archivos en una carpeta nueva o vacía y adicionalmente, tenga presente el path(dirección) de dónde se encuentre la carpeta
+
+3. Abra los archivos main.cpp y t_hash.cpp. Luego, en las líneas 158,212,222,223,231,232 y 235 del archivo main.cpp y también en las líneas 67, 150, y 182 del archivo t_hash.cpp cambie el path(dirección) hasta la carpeta en la que guardó originalmente los archivos.
+Por ejemplo, si en las líneas indicadas tiene C:/Users/Ángel/Desktop/final/CarpetaProtegida/Passwords.txt, lo que usted tiene que cambiar "C:/Users/Ángel/Desktop/final" y de resto, dejarlo igual.
+
+4. Ya en la terminal, el programa tiene que ser ejecutado desde la terminal de windows ya que hay librerías incluidas exclusivas de este sistema operativo.
+
+5. Cuando ya esté ubicado en la carpeta dónde están los archivos mencionados del punto 1, ejecute las siguientes líneas:
+-> g++ -std=gnu++0x -Wall -Wextra -Werror -c main.cpp
+-> g++ -std=gnu++0x -Wall -Wextra -Werror -c t_hash.cpp
+-> g++ -std=gnu++0x -Wall -Wextra -Werror main.o t_hash.o
+-> ./a.exe
+
+Si sigue estas instrucciones al pie de la letra, podrá utilizar el programa. Esperamos que lo disfrute.
+
+* Si quiere volver a usarlo, tiene que eliminar los siguientes archivos de la carpeta:
+-> no_abrir
+-> todas las carpetas que se pudieron haber creado durante la ejecución
+
+Luego, abra el archivo "no_abrir_copia.txt" copie su contenido, cree un nuevo documento de texto, pegue el contenido de "no_abrir_copia.txt", guárdelo en la misma carpeta del punto 1 con el nombre "no_abrir" y repita los pasos 1 a 5.
