@@ -4,7 +4,7 @@
 #include <cstdlib>
 #include <stdio.h>
 
-//Constructor
+//constructor
 template<typename F>
 th_files<F>::th_files(){
   tablesize_files = TABLE_FILES_SIZE;
@@ -47,32 +47,6 @@ bool th_files<F>::search(string key){
 
     return search_bucket(bucket, key) != nullptr;
 }
-
-//insert
-template<typename F>
-void th_files<F>::insert(string key , F value, string usuarioA){
-  if(count_files==tablesize_files) rehash(usuarioA);
-  int bucket = hash_files(key);
-  KeyValueFiles<F> *cp = search_bucket(bucket, key);
-  string valueF=value;
-  if (cp == nullptr){
-      cp = new KeyValueFiles<F>;
-      cp->key = key;
-      cp->next = table_files[bucket];
-      table_files[bucket] = cp;
-      count_files++;
-    }
-  cp->value = value;
-  ofstream file;
-  string aux0 = "C:/Users/Ángel/desktop/aed/";
-  string aux1 = aux0+usuarioA+"_tabla/";
-  string aux2 = aux1+key+".txt";
-  file.open(aux2);
-  file << "Ingrese su texto\n";
-  file<<valueF<<endl;
-  file.close();
-}
-
 //rehash
 template <typename F>
 void th_files<F>::rehash(string usuarioA) {
@@ -97,14 +71,36 @@ void th_files<F>::rehash(string usuarioA) {
     }
 
 }
+//insert
+template<typename F>
+void th_files<F>::insert(string key , F value, string usuarioA){
+  if(count_files==tablesize_files) rehash(usuarioA);
+  int bucket = hash_files(key);
+  KeyValueFiles<F> *cp = search_bucket(bucket, key);
+  string valueF=value;
+  if (cp == nullptr){
+      cp = new KeyValueFiles<F>;
+      cp->key = key;
+      cp->next = table_files[bucket];
+      table_files[bucket] = cp;
+      count_files++;
+    }
+  cp->value = value;
+  ofstream file;
+  string aux0 = "C:/Users/gianc/Music/proyecto_algoritmos/";
+  string aux1 = aux0+usuarioA+"_tabla/";
+  string aux2 = aux1+key+".txt";
+  file.open(aux2);
+  file << "Ingrese su texto\n";
+  file<<valueF<<endl;
+  file.close();
+}
 
-//size
 template<typename F>
 int th_files<F>::size(){
   return count_files;
 }
 
-//empty
 template<typename F>
 bool th_files<F>::empty(){
   return count_files == 0;
@@ -147,7 +143,7 @@ template <typename F>
 void th_files<F>::removeFL(string key,string usuarioA) {
   unsigned int bucket = hash_files(key);
   KeyValueFiles<F>* tmp = table_files[bucket];
-  string aux0 = "C:/Users/Ángel/desktop/aed/";
+  string aux0 = "C:/Users/gianc/Music/proyecto_algoritmos/";
   string aux1 = aux0+usuarioA+"_tabla/";
   string aux2 = aux1+key+".txt";
   LPCTSTR aux3 = aux2.c_str();
@@ -179,7 +175,7 @@ void th_files<F>::removeFL(string key,string usuarioA) {
 template <typename F>
 void th_files <F>::open_file(string key,string usuarioA){
   bool aux = search(key);
-  string aux0 = "C:/Users/Ángel/desktop/aed/";
+  string aux0 = "C:/Users/gianc/Music/proyecto_algoritmos/";
   string aux1 = aux0+usuarioA+"_tabla/";
   string aux2 = aux1+key+".txt";
   LPCTSTR aux3 = aux2.c_str();
@@ -189,6 +185,8 @@ void th_files <F>::open_file(string key,string usuarioA){
     cout<<"el archivo "<<key<<"no existe en su usuario"<<endl;
   }
 }
+
+
 #endif /* t_hash_hpp */
 
 //=============================================================================================================================================================================================================================================
